@@ -39,7 +39,6 @@ export default function App() {
     }
   };
 
-  // Process language distribution for chart
   const languageCounts = repos.reduce((acc, repo) => {
     if (repo.language) {
       acc[repo.language] = (acc[repo.language] || 0) + 1;
@@ -58,7 +57,6 @@ export default function App() {
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans p-4 sm:p-8">
       <div className="max-w-5xl mx-auto space-y-8">
         
-        {/* Header & Search */}
         <header className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-800 pb-6">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-indigo-600 rounded-xl text-white">
@@ -99,8 +97,6 @@ export default function App() {
           </div>
         ) : userData && (
           <div className="space-y-8">
-            
-            {/* User Profile Overview */}
             <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-6 backdrop-blur">
               <img src={userData.avatar_url} alt={userData.name} className="w-24 h-24 rounded-full border-2 border-indigo-500 shadow-lg" />
               <div className="flex-1 text-center md:text-left space-y-2">
@@ -117,10 +113,7 @@ export default function App() {
               </a>
             </div>
 
-            {/* Grid Layout for Charts & Repos */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              
-              {/* Language Breakdown Chart */}
               <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between">
                 <h3 className="text-sm font-semibold text-slate-300 mb-4 flex items-center gap-2">
                   <Code size={16} className="text-indigo-400" /> Top Languages Breakdown
@@ -145,7 +138,6 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Latest Repositories */}
               <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 flex flex-col">
                 <h3 className="text-sm font-semibold text-slate-300 mb-4 flex items-center gap-2">
                   <BookOpen size={16} className="text-indigo-400" /> Recent Repositories
@@ -162,9 +154,7 @@ export default function App() {
                   ))}
                 </div>
               </div>
-
             </div>
-
           </div>
         )}
       </div>
