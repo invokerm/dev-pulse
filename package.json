@@ -1,0 +1,22 @@
+# 1. Create a new folder and enter it
+mkdir dev-pulse && cd dev-pulse
+
+# 2. Initialize a git repository
+git init
+
+# 3. Create the necessary folder structure
+mkdir -p src/services
+
+# 4. Save the files (Copy and paste the code from above into these respective files)
+# You can create them using: touch package.json README.md src/App.jsx src/services/githubApi.js
+
+# 5. Stage and commit the files
+git add .
+git commit -m "feat: initial commit for DevPulse GitHub analytics dashboard"
+
+# 6. Link it to your GitHub repository (replace YOUR_USERNAME with your actual GitHub username)
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/dev-pulse.git
+
+# 7. Push it live to your profile!
+git push -u origin main
